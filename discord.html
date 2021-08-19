@@ -11,6 +11,13 @@ body {
 }
 h1 {text-align: center;}
 p {text-align: center;}
+.div1 {text-align: center;}
+.button1 {
+  border: none;
+  background-color: rgb(90, 177, 228);
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
 a:link {
   color: rgb(0, 129, 168);
   background-color: transparent;
@@ -42,11 +49,84 @@ a:active {
 mark{
  background-color:#8ecfd8;
 }
+/*####################*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.footer{
+  position: fixed;
+  left: "100px";
+  bottom: "30px";
+  width: 90%;
+  max-width: 400px;
+  color: white;
+  text-align: center;
+}
 </style>
 <body>
 <h1>Discord contact <img src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/discord.svg" width="30px"></h1>
-<p>Here is my Discord id <mark>  Le Marquis de Sade#4107 </mark>, add me using the <a href="https://discord.com/">Discord app.</a>.<br>If you don't have Discord, you can contact me via another mean, or  <a href="https://discord.com/register">create an account.</a> </p><br>
+<div class="div1">
+  <span>Here is my Discord id </span>
+  <div class="tooltip">
+  <button onclick="myFunction()" onmouseout="outFunc()" class="button1">
+    <span class="tooltiptext" id="myTooltip">Copy to clipboard</span>
+    Le Marquis de Sade#4107
+    </button>
+  </div>, 
+  <span>add me using the <a href="https://discord.com/">Discord app.</a>.<br>If you don't have Discord, you can contact me via another mean, or  <a href="https://discord.com/register">create an account.</a> </span></div><br>
 <br>
 <img src="https://raw.githubusercontent.com/Ljuder/Ljuder/main/Discord%20profile.png" alt="Discord%20profile" class="responsive">
+<div class="footer">
+  <a href="Le Marquis de Sade#4107"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/discord.svg">
+  <a href="donatienbrillet@gmail.com"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/mail.svg">
+  <a href="https://ljuder.github.io/wechat.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/wechat.svg">
+</div>
+<script>
+  function myFunction() {
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText("Le Marquis de Sade#4107");
+    /* Alert the copied text */
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copied !";
+  }
+  function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    document.getElementById("myTooltip") = "Copy to clipboard";
+  }
+</script>
 </body>
 </html>
