@@ -113,17 +113,16 @@
         width:65%;
         margin: auto;
     }
-    .halfdivright {
+    .halfdiv {
         display: inline-block;
         width: 49%;
-        float: right;
         text-align: justify;
+        height:auto;
     }
-    .halfdivlelft {
-        display: inline-block;
-        width: 49%;
-        float: left;
-        text-align: justify;
+    section{
+        display: flex;
+        height: auto;
+        justify-content: space-around
     }
     </style>
 </head>
@@ -131,8 +130,8 @@
 <div class="middlediv">
     <h1>My favorite animes</h1>
     <p>I personnaly really enjoy watching animes, so i will use this page to talk about this topic</a> </p><br>
-    <article>
-        <div class="halfdivlelft">
+    <section>
+        <div class="halfdiv">
             <h1>Neon Genesis Evangelion</h1>
             <p>Easely one of my favorite anime. I find the story and the caracters amazing, thanks to a really well written scenario from Hideaki Anno, the director of the show.<br>The story also has a psychological dimension : most of the caracters are more or less emmotionally unstable, and the show tackles diverse psychological/philosophical subjects.</p>
             <p>You can learn more about this anime<a href="https://animixplay.to/anime/30/Neon_Genesis_Evangelion"> here</a> or watch it at the folowing links :<br>
@@ -140,12 +139,24 @@
                 <a href="https://www.netflix.com/title/81033445"><img height="35" src="https://raw.githubusercontent.com/Ljuder/Ljuder.github.io/main/assets/Netflix_Symbol_PMS.png"></a>
             </p>
         </div>
-        <div class="halfdivright">
+        <div class="halfdiv">
             <video id="player" playsinline controls data-poster="https://raw.githubusercontent.com/Ljuder/Ljuder.github.io/main/assets/NGE01_poster.webp">
                 <source src="https://storage.googleapis.com/theta-now-322811/4HZXAZKJO8LU/st22_neon-genesis-evangelion--episode-1.1629692199.mp4" type="video/mp4" />
             </video>
         </div>
-    </article>
+    </section>
+    <br>
+    <section>
+        <div class="halfdiv">
+            <video id="player2" playsinline controls data-poster="">
+                <source src="https://storage.googleapis.com/seismic-catbird-323015/ONZ_4U48E919/st22_fullmetal-alchemist-brotherhood-episode-4.1629309336.mp4" type="video/mp4" />
+            </video>
+        </div>
+        <div class="halfdiv">
+            <h1>Fullmetal Alchemist</h1>
+            <p>bloop</p>
+        </div>
+    </section>
 </div>
 <ul>
     <li><a href="https://ljuder.github.io/" class="off">Home</a></li>
@@ -161,7 +172,9 @@
 </div>
 <script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
 <script>
-    const player = new Plyr('#player');
+    //const player = new Plyr('#player');//
+    const players = Plyr.setup('video', {captions: {active: true}});
+    window.players = players;
 </script>
 
 </script>
