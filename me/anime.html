@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Ljuder's website menu</title>
+        <title>Ljuder's favorite animes</title>
         <link rel="shortcut icon" href="https://raw.githubusercontent.com/Ljuder/Ljuder.github.io/main/assets/profilepic.jpeg" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
     <style>
+    * {
+        box-sizing: border-box;
+    }
     body {
         background-color: rgb(25, 25, 25);
         font-family: 'Space Grotesk', sans-serif;
         color:rgb(255, 255, 255);
+        text-align: center;
     }
     h1 {text-align: center;}
-    p {text-align: center;}
+    p {}
     a:link {
       color: rgb(0, 129, 168);
       background-color: transparent;
@@ -70,6 +75,8 @@
         padding: 0;
         width: 200px;
         background-color: rgb(75, 75, 75);
+        opacity: 0.75;
+        text-align: left;
     }
     li a {
         display: block;
@@ -101,11 +108,45 @@
         color: black;
         text-decoration: none;
     }
+    .middlediv {
+        display: block;
+        width:65%;
+        margin: auto;
+    }
+    .halfdivright {
+        display: inline-block;
+        width: 49%;
+        float: right;
+        text-align: justify;
+    }
+    .halfdivlelft {
+        display: inline-block;
+        width: 49%;
+        float: left;
+        text-align: justify;
+    }
     </style>
 </head>
 <body>
-<h1>Welcome to my website !</h1>
-<p>This website purpose is to post a lot of stuffs & to increase my knoledge about web dev.<br>I will try to make this website as user friendly as i can and i will post many things about my passions ! 😄</a> </p><br>
+<div class="middlediv">
+    <h1>My favorite animes</h1>
+    <p>I personnaly really enjoy watching animes, so i will use this page to talk about this topic</a> </p><br>
+    <article>
+        <div class="halfdivlelft">
+            <h1>Neon Genesis Evangelion</h1>
+            <p>Easely one of my favorite anime. I find the story and the caracters amazing, thanks to a really well written scenario from Hideaki Anno, the director of the show.<br>The story also has a psychological dimension : most of the caracters are more or less emmotionally unstable, and the show tackles diverse psychological/philosophical subjects.</p>
+            <p>You can learn more about this anime<a href="https://animixplay.to/anime/30/Neon_Genesis_Evangelion"> here</a> or watch it at the folowing links :<br>
+                <a href="https://animixplay.to/v1/neon-genesis-evangelion-"><img height="35" src="https://animixplay.to/icon.png"></a>
+                <a href="https://www.netflix.com/title/81033445"><img height="35" src="file:///Users/donatien/Downloads/02_Netflix_Symbol/03_Netflix_Symbol_PMS/Netflix_Symbol_PMS.png"></a>
+            </p>
+        </div>
+        <div class="halfdivright">
+            <video id="player" playsinline controls data-poster="https://raw.githubusercontent.com/Ljuder/Ljuder.github.io/main/assets/NGE01_poster.webp">
+                <source src="https://storage.googleapis.com/theta-now-322811/4HZXAZKJO8LU/st22_neon-genesis-evangelion--episode-1.1629692199.mp4" type="video/mp4" />
+            </video>
+        </div>
+    </article>
+</div>
 <ul>
     <li><a href="https://ljuder.github.io/" class="off">Home</a></li>
     <li><a href="https://github.com/Ljuder" class="off">Programmation</a></li>
@@ -113,11 +154,16 @@
     <li><a class="active">Anime</a></li>
 </ul>
 <div class="footer">
-    <a href="https://github.com/Ljuder"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/github.svg">
-    <a href="https://ljuder.github.io/discord.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/discord.svg">
-    <a href="https://ljuder.github.io/mail.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/mail.svg">
-    <a href="https://ljuder.github.io/wechat.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/wechat.svg">
+    <a href="https://github.com/Ljuder"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/github.svg"></a>
+    <a href="https://ljuder.github.io/discord.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/discord.svg"></a>
+    <a href="https://ljuder.github.io/mail.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/mail.svg"></a>
+    <a href="https://ljuder.github.io/wechat.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/wechat.svg"></a>
 </div>
-<script></script>
+<script src="https://cdn.plyr.io/3.6.8/plyr.polyfilled.js"></script>
+<script>
+    const player = new Plyr('#player');
+</script>
+
+</script>
 </body>
 </html>
