@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <title>Adresse e-mail</title>
+  <link rel="shortcut icon" href="https://gallery.yopriceville.com/var/resizes/Free-Clipart-Pictures/Decorative-Elements-PNG/Leaf_PNG_Clipart.png?m=1558487738" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet"> 
+<style>
+body {
+    background-color: rgb(20, 122, 17);
+    font-family: 'Space Grotesk', sans-serif;
+    color:rgb(255, 255, 255);
+}
+h1 {text-align: center;}
+p {text-align: center;}
+.div1 {text-align: center;}
+.button1 {
+  border: none;
+  background-color: rgb(90, 177, 228);
+  font-family: 'Space Grotesk', sans-serif;
+  cursor: pointer;
+}
+a:link {
+  color: rgb(16, 192, 246);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: rgb(134, 54, 199);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: rgb(0, 195, 255);
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: rgb(0, 255, 179);
+  background-color: transparent;
+  text-decoration: underline;
+}
+.responsive {
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+mark{
+ background-color:#8ecfd8;
+}
+/*####################*/
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  left: 50%;
+  margin-left: -75px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+.footer{
+  position: fixed;
+  left: 100px;
+  bottom: 30px;
+  width: auto;
+  max-width: 400px;
+  color: white;
+  text-align: center;
+}
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+</style>
+<body>
+<div class="vertical-center center">
+    <h1> Adresse mail <img src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/mail.svg" width="30px"></h1>
+    <div class="div1">
+      <span>Vous pouvez contacter notre association vie cette adresse mail </span>
+      <div class="tooltip">
+      <button onclick="myFunction()" onmouseout="outFunc()" class="button1">
+        <span class="tooltiptext" id="myTooltip">Copier l'adresse</span>
+        brillet.donatien@lfip.net.cn
+        </button>
+      </div>.
+      <span><br>N'hesitez pas de nous contacter si vous avez une question, une idée, ou des critiques constructives à nous faire parvenir.</a> </span></div><br>
+    <br>
+</div>
+<div class="footer">
+    <a href="https://ljuder.github.io/association/wechat.html"><img height="35" src="https://github.com/edent/SuperTinyIcons/raw/master/images/svg/wechat.svg"></a>
+</div>
+<script>
+  function myFunction() {
+    /* Copy the text inside the text field */
+    navigator.clipboard.writeText("brillet.donatien@lfip.net.cn");
+    /* Alert the copied text */
+    var tooltip = document.getElementById("myTooltip");
+    tooltip.innerHTML = "Copiée !";
+  }
+  function outFunc() {
+    var tooltip = document.getElementById("myTooltip");
+    document.getElementById("myTooltip").innerHTML = "Copy to clipboard";
+  }
+</script>
+</body>
+</html>
